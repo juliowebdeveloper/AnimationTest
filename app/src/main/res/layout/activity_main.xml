@@ -114,6 +114,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_shared_element"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="16dp"
