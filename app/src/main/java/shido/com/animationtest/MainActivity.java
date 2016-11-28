@@ -7,6 +7,8 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         bindControl();
-
+        setUpWindoAnimation();
 
     }
 
@@ -83,6 +85,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+
+    private void setUpWindoAnimation(){
+        Slide slide = new Slide();
+        slide.setDuration(1000);
+        slide.setSlideEdge(Gravity.LEFT);
+        getWindow().setReenterTransition(slide);
+        getWindow().setExitTransition(slide);
+        //Para impedir o Overlaping das animações
+        getWindow().setAllowReturnTransitionOverlap(false);
+    }
+
+
 
     @Override
     public void onClick(View v) {

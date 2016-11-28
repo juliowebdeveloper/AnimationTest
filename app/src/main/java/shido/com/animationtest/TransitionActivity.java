@@ -52,6 +52,9 @@ public class TransitionActivity extends AppCompatActivity {
         setUpToolbar();
         bindControl();
 
+         //For overlap between MainActivity and Entering TransitionActivity
+        getWindow().setAllowEnterTransitionOverlap(false);
+
     }
 
     private void bindControl() {

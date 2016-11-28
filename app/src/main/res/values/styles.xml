@@ -9,8 +9,15 @@
 
         <item name="android:colorControlHighlight">#2fff00</item>
 
-        <!--ENable transictions between all activities-->
+        <!--Enable transictions between all activities-->
         <item name="android:windowContentTransitions">true</item>
+        
+        <!-- Disable Activity Transitions Overlap -->
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+
+
+
 
     </style>
 

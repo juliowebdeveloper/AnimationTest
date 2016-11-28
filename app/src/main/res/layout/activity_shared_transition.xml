@@ -23,7 +23,7 @@
         android:layout_margin="20dp"
         android:id="@+id/activity_title"
         android:transitionName="text_shared"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textColor="@android:color/black"
         android:text="Shared Element"
         />
